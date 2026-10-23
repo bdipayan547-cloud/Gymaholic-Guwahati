@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Gymaholic Guwahati: 4K images are embedded directly in this HTML. No image folder required. -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gymaholic Guwahati — Premium Fitness Club</title>
+<meta name="description" content="Gymaholic Guwahati — premium fitness club at Gogoi Towers, Silpukhuri, Guwahati.">
+<style>
+:root {
+  --bg:#0a0a09; --panel:#11110f; --panel2:#171713; --gold:#d7b46a; --gold2:#f2d18a;
+  --cream:#f4f0e7; --muted:#a7a39a; --line:rgba(255,255,255,.1); --max:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--cream);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%}
+button{font:inherit}
+.nav{position:fixed;z-index:50;top:0;left:0;right:0;padding:20px 5vw;display:flex;align-items:center;justify-content:space-between;transition:.35s}
+.nav.scrolled{background:rgba(10,10,9,.88);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);padding-block:14px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.08em}
+.logo-mark{width:38px;height:38px;border:1px solid var(--gold);display:grid;place-items:center;transform:rotate(45deg)}
+.logo-mark span{transform:rotate(-45deg);font-size:15px;color:var(--gold);font-weight:900}
+.logo-text b{display:block;font-size:15px;letter-spacing:.15em}
+.logo-text small{display:block;color:var(--muted);font-size:9px;letter-spacing:.22em;margin-top:1px}
+.nav-links{display:flex;gap:30px;font-size:13px;color:#d5d1c7}
+.nav-links a{position:relative}
+.nav-links a:after{content:"";position:absolute;left:0;bottom:-7px;width:0;height:1px;background:var(--gold);transition:.3s}
+.nav-links a:hover:after{width:100%}
+.nav-cta,.gold-btn{background:var(--gold);color:#111;border:0;padding:13px 20px;font-weight:800;letter-spacing:.05em;cursor:pointer;transition:.3s}
+.nav-cta:hover,.gold-btn:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 12px 30px rgba(215,180,106,.18)}
+.menu{display:none;background:none;border:1px solid var(--line);color:white;padding:9px 12px}
+.hero{min-height:100vh;position:relative;display:flex;align-items:end;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,5,4,.94) 0%,rgba(5,5,4,.68) 45%,rgba(5,5,4,.3) 100%),linear-gradient(0deg,#0a0a09 0%,transparent 42%);z-index:1}
+.hero-bg{position:absolute;inset:0;background-image:url('assets/Gymaholic_Guwahati_4K_01.jpg');background-size:cover;background-position:center;filter:saturate(.75) contrast(1.05);transform:scale(1.04);animation:heroZoom 12s ease-out forwards}
+@keyframes heroZoom{to{transform:scale(1)}}
+.hero-content{position:relative;z-index:2;width:min(var(--max),90vw);margin:0 auto;padding:150px 0 100px}
+.eyebrow{color:var(--gold2);font-size:11px;letter-spacing:.28em;text-transform:uppercase;font-weight:800;margin-bottom:22px}
+.hero h1{font-size:clamp(55px,8vw,118px);line-height:.88;letter-spacing:-.06em;max-width:850px;text-transform:uppercase}
+.hero h1 em{font-family:Georgia,serif;font-weight:400;color:var(--gold);letter-spacing:-.07em}
+.hero-copy{max-width:570px;color:#c4c0b7;margin:30px 0 34px;font-size:17px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.outline-btn{padding:13px 20px;border:1px solid rgba(255,255,255,.3);background:rgba(0,0,0,.2);color:#fff;font-weight:800;letter-spacing:.05em;transition:.3s}
+.outline-btn:hover{border-color:var(--gold);color:var(--gold)}
+.hero-meta{margin-top:72px;display:flex;gap:40px;flex-wrap:wrap;color:#aaa69c;font-size:12px}
+.hero-meta strong{display:block;color:#fff;font-size:14px;margin-bottom:3px}
+.section{padding:120px 5vw}
+.wrap{width:min(var(--max),100%);margin:auto}
+.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:55px}
+.kicker{color:var(--gold);font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:800;margin-bottom:14px}
+h2{font-size:clamp(40px,5vw,72px);line-height:.95;letter-spacing:-.055em;text-transform:uppercase}
+.section-head p{max-width:390px;color:var(--muted);font-size:14px}
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:35px 25px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat b{font-size:36px;display:block;color:var(--gold2);letter-spacing:-.05em}
+.stat span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.16em}
+.about{background:linear-gradient(180deg,#0a0a09,#0f0f0d)}
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:80px;align-items:center}
+.about-img{position:relative;height:640px;overflow:hidden}
+.about-img img{height:100%;object-fit:cover;filter:saturate(.82)}
+.about-img:after{content:"GYMAHOLIC";position:absolute;right:-35px;bottom:35px;writing-mode:vertical-rl;color:rgba(255,255,255,.3);font-size:11px;letter-spacing:.3em}
+.about-copy p{color:#aaa69d;margin:24px 0;max-width:540px}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:28px 0 35px}
+.check{border-top:1px solid var(--line);padding-top:13px;color:#dedad1;font-size:13px}
+.check:before{content:"✦";color:var(--gold);margin-right:9px}
+.programs{background:#11110f}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:#0b0b0a;border:1px solid var(--line);padding:34px;min-height:290px;position:relative;overflow:hidden;transition:.45s}
+.card:hover{transform:translateY(-7px);border-color:rgba(215,180,106,.5)}
+.card-no{color:#555;font-size:12px;letter-spacing:.15em}
+.card h3{font-size:28px;text-transform:uppercase;letter-spacing:-.04em;margin:70px 0 15px}
+.card p{color:var(--muted);font-size:13px}
+.card .arrow{position:absolute;right:25px;bottom:24px;color:var(--gold);font-size:22px}
+.gallery{background:#f1ede4;color:#0b0b0a}
+.gallery .kicker{color:#8c6b28}
+.gallery-grid{display:grid;grid-template-columns:1.35fr .8fr .8fr;grid-template-rows:300px 300px;gap:10px}
+.gallery-grid figure{overflow:hidden;position:relative}
+.gallery-grid figure:first-child{grid-row:1/3}
+.gallery-grid img{height:100%;object-fit:cover;transition:.7s}
+.gallery-grid figure:hover img{transform:scale(1.05)}
+.location{background:#0b0b0a}
+.location-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.info-panel{background:#151512;border:1px solid var(--line);padding:40px}
+.info-panel h3{font-size:25px;margin-bottom:25px;text-transform:uppercase}
+.info-row{display:flex;gap:16px;padding:17px 0;border-bottom:1px solid var(--line)}
+.info-row:last-child{border-bottom:0}
+.icon{color:var(--gold);width:24px}
+.info-row small{color:#77736a;display:block;font-size:10px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:4px}
+.info-row span{color:#ddd8cf;font-size:14px}
+.map{min-height:100%;background:radial-gradient(circle at 30% 30%,rgba(215,180,106,.18),transparent 35%),#151512;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;text-align:center;padding:30px}
+.map-inner{max-width:340px}
+.map-pin{width:64px;height:64px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;margin:0 auto 20px;color:var(--gold);font-size:25px}
+.cta{padding:130px 5vw;background:linear-gradient(110deg,#d7b46a,#a98435);color:#0b0b0a;text-align:center}
+.cta h2{max-width:850px;margin:auto;font-size:clamp(45px,7vw,92px)}
+.cta p{max-width:540px;margin:22px auto 30px;color:#302719}
+.dark-btn{background:#0b0b0a;color:#fff;padding:14px 24px;display:inline-block;font-weight:800;transition:.3s}
+.dark-btn:hover{transform:translateY(-2px);background:#191814}
+footer{padding:35px 5vw;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;color:#77736a;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .8s ease,transform .8s ease}
+.reveal.show{opacity:1;transform:none}
+@media(max-width:850px){
+  .nav-links,.nav-cta{display:none} .menu{display:block}
+  .nav.open .nav-links{display:flex;position:absolute;top:70px;left:5vw;right:5vw;background:#10100e;border:1px solid var(--line);padding:20px;flex-direction:column;gap:18px}
+  .hero-content{padding-top:150px}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat:nth-child(2){border-right:0} .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .about-grid,.location-grid{grid-template-columns:1fr;gap:30px}
+  .about-img{height:480px}
+  .cards{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:260px 260px 260px}
+  .gallery-grid figure:first-child{grid-column:1/3;grid-row:auto}
+  .section-head{display:block} .section-head p{margin-top:18px}
+}
+@media(max-width:520px){
+  .section{padding:85px 5vw} .hero h1{font-size:56px}
+  .hero-meta{gap:22px} .checks{grid-template-columns:1fr}
+  .gallery-grid{display:grid;grid-template-columns:1fr;grid-template-rows:330px 240px 240px 240px 240px}
+  .gallery-grid figure:first-child{grid-column:auto}
+  footer{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<header class="nav" id="nav">
+  <a class="logo" href="#top" aria-label="Gymaholic Guwahati">
+    <div class="logo-mark"><span>G</span></div>
+    <div class="logo-text"><b>GYMAHOLIC</b><small>GUWAHATI · EST. FITNESS</small></div>
+  </a>
+  <nav class="nav-links">
+    <a href="#about">About</a><a href="#programs">Programs</a><a href="#gallery">Gallery</a><a href="#visit">Visit</a>
+  </nav>
+  <a class="nav-cta" href="tel:08724997546">CALL NOW</a>
+  <button class="menu" id="menu">MENU</button>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="eyebrow">Premium fitness · Silpukhuri · Guwahati</div>
+    <h1>Train with<br><em>purpose.</em></h1>
+    <p class="hero-copy">A bold training space built around serious workouts, a strong community and a premium fitness experience.</p>
+    <div class="actions">
+      <a class="gold-btn" href="#visit">START YOUR JOURNEY</a>
+      <a class="outline-btn" href="#gallery">EXPLORE THE CLUB</a>
+    </div>
+    <div class="hero-meta">
+      <div><strong>05:30 AM</strong>Opening most days</div>
+      <div><strong>GOGOI TOWERS</strong>Above Federal Bank</div>
+      <div><strong>SILPUKHURI</strong>Guwahati, Assam</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;padding-bottom:0">
+  <div class="wrap stats reveal">
+    <div class="stat"><b>05:30</b><span>Morning opening</span></div>
+    <div class="stat"><b>7 DAYS</b><span>Weekly access</span></div>
+    <div class="stat"><b>24/7</b><span>Fitness mindset</span></div>
+    <div class="stat"><b>GWA</b><span>Silpukhuri · Guwahati</span></div>
+  </div>
+</section>
+
+<section class="section about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-img reveal"><img src="assets/Gymaholic_Guwahati_4K_05.jpg" alt="Gymaholic Guwahati training floor"></div>
+    <div class="about-copy reveal">
+      <div class="kicker">The Gymaholic standard</div>
+      <h2>More than<br>a workout.</h2>
+      <p>Gymaholic Guwahati is designed for people who want to show up consistently and train with intent. From the floor to the community, every detail is built around progress.</p>
+      <div class="checks">
+        <div class="check">Focused training environment</div>
+        <div class="check">Modern equipment floor</div>
+        <div class="check">Personal training support</div>
+        <div class="check">Community-driven atmosphere</div>
+      </div>
+      <a class="gold-btn" href="tel:08724997546">ENQUIRE NOW</a>
+    </div>
+  </div>
+</section>
+
+<section class="section programs" id="programs">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div><div class="kicker">Train your way</div><h2>Built for<br>progress.</h2></div>
+      <p>Choose the training style that matches your goal, then make consistency the habit that gets you there.</p>
+    </div>
+    <div class="cards">
+      <article class="card reveal"><span class="card-no">01 / STRENGTH</span><h3>Build Power</h3><p>Structured strength-focused training with the space and equipment to keep progressing.</p><span class="arrow">↗</span></article>
+      <article class="card reveal"><span class="card-no">02 / CONDITIONING</span><h3>Get Fitter</h3><p>Move better, work harder and build conditioning through purposeful sessions.</p><span class="arrow">↗</span></article>
+      <article class="card reveal"><span class="card-no">03 / COACHING</span><h3>Train Smarter</h3><p>Need direction? Ask about personal training and build a plan around your goals.</p><span class="arrow">↗</span></article>
+    </div>
+  </div>
+</section>
+
+<section class="section gallery" id="gallery">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div><div class="kicker">Inside Gymaholic</div><h2>See the<br>energy.</h2></div>
+      <p>Real photos from the club — the people, the floor, the training atmosphere and the Gymaholic community.</p>
+    </div>
+    <div class="gallery-grid reveal">
+      <figure><img src="assets/Gymaholic_Guwahati_4K_02.jpg" alt="Gymaholic community"></figure>
+      <figure><img src="assets/Gymaholic_Guwahati_4K_03.jpg" alt="Gymaholic interior"></figure>
+      <figure><img src="assets/Gymaholic_Guwahati_4K_04.jpg" alt="Training community"></figure>
+      <figure><img src="assets/Gymaholic_Guwahati_4K_01.jpg" alt="Gym floor"></figure>
+      <figure><img src="assets/Gymaholic_Guwahati_4K_06.jpg" alt="Personal training session"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section location" id="visit">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div><div class="kicker">Find us</div><h2>Come<br>train.</h2></div>
+      <p>Drop in, ask about membership and experience the club for yourself.</p>
+    </div>
+    <div class="location-grid">
+      <div class="info-panel reveal">
+        <h3>Club details</h3>
+        <div class="info-row"><div class="icon">⌖</div><div><small>Address</small><span>Gogoi Towers, above Federal Bank, Silpukhuri, Guwahati, Assam 781003</span></div></div>
+        <div class="info-row"><div class="icon">◷</div><div><small>Friday / Saturday</small><span>5:30 am – 10:30 pm</span></div></div>
+        <div class="info-row"><div class="icon">◷</div><div><small>Sunday</small><span>5:30 am – 11:30 am</span></div></div>
+        <div class="info-row"><div class="icon">◷</div><div><small>Monday – Thursday</small><span>5:30 am – 10:30 pm</span></div></div>
+        <div class="info-row"><div class="icon">☎</div><div><small>Phone</small><span>087249 97546</span></div></div>
+        <div class="actions" style="margin-top:26px">
+          <a class="gold-btn" href="tel:08724997546">CALL GYMAHOLIC</a>
+          <a class="outline-btn" href="https://www.google.com/maps/search/?api=1&query=Gymaholic+Guwahati+Gogoi+Towers+Silpukhuri" target="_blank" rel="noopener">OPEN MAP</a>
+        </div>
+      </div>
+      <div class="map reveal">
+        <div class="map-inner">
+          <div class="map-pin">⌖</div>
+          <div class="kicker">Silpukhuri · Guwahati</div>
+          <h3 style="font-size:32px;line-height:1.05;text-transform:uppercase;margin-bottom:15px">Gogoi Towers</h3>
+          <p style="color:var(--muted);font-size:13px;margin-bottom:24px">Above Federal Bank · Assam 781003</p>
+          <a class="gold-btn" href="https://www.google.com/maps/search/?api=1&query=Gymaholic+Guwahati+Gogoi+Towers+Silpukhuri" target="_blank" rel="noopener">GET DIRECTIONS</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="kicker" style="color:#3b2d17">Your next chapter starts here</div>
+  <h2>SHOW UP.<br>GET STRONGER.</h2>
+  <p>Ready to make your training a lifestyle? Call Gymaholic Guwahati and take the first step.</p>
+  <a class="dark-btn" href="tel:08724997546">087249 97546</a>
+</section>
+</main>
+
+<footer>
+  <span>© 2026 Gymaholic Guwahati</span>
+  <span>Gogoi Towers · Silpukhuri · Guwahati</span>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+const menu = document.getElementById('menu');
+menu.addEventListener('click',()=>nav.classList.toggle('open'));
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>30));
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+const observer = new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
